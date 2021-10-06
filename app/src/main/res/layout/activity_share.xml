@@ -8,6 +8,31 @@
     android:orientation="vertical"
     tools:context=".activity.ShareActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:background="@drawable/bg_appbar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Edit Image"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_16ssp" />
+
+        <ImageView
+            android:id="@+id/ivHome"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/home"
+            android:tint="@color/colorPrimary" />
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,43 +43,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimary"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="50dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Edit Image"
-                    android:textColor="#ffffff"
-                    android:textSize="20sp" />
-
-                <ImageView
-                    android:id="@+id/ivHome"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:padding="15dp"
-                    android:src="@drawable/home" />
-            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="240dp"
+                android:layout_height="match_parent"
                 android:layout_margin="7dp"
-                app:cardBackgroundColor="#bbbbbb"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="4dp">
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
-
 
                     <ImageView
                         android:id="@+id/ivMain"
@@ -67,11 +68,8 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:orientation="horizontal"
-                        android:paddingLeft="5dp"
-                        android:paddingTop="2dp"
-                        android:paddingRight="5dp"
-                        android:paddingBottom="2dp">
+                        android:layout_margin="@dimen/_10sdp"
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:id="@+id/ll_whatsapp"
@@ -82,12 +80,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="43dp"
-                                android:layout_height="43dp"
-                                android:background="@drawable/share_icon_bg"
-                                android:backgroundTint="#25D366"
-                                android:padding="8dp"
-                                android:src="@drawable/ic_whatsapp" />
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:background="@drawable/bg_main_button_icon"
+                                android:padding="@dimen/_8sdp"
+                                android:src="@drawable/ic_whatsapp"
+                                android:tint="@color/colorPrimary" />
 
                         </LinearLayout>
 
@@ -100,12 +98,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="43dp"
-                                android:layout_height="43dp"
-                                android:background="@drawable/share_icon_bg"
-                                android:backgroundTint="#3b5999"
-                                android:padding="8dp"
-                                android:src="@drawable/ic_facebook" />
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:background="@drawable/bg_main_button_icon"
+                                android:padding="@dimen/_8sdp"
+                                android:src="@drawable/ic_facebook"
+                                android:tint="@color/colorPrimary" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -117,12 +115,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="43dp"
-                                android:layout_height="43dp"
-                                android:background="@drawable/share_icon_bg"
-                                android:backgroundTint="#e4405f"
-                                android:padding="8dp"
-                                android:src="@drawable/ic_instagram" />
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:background="@drawable/bg_main_button_icon"
+                                android:padding="@dimen/_8sdp"
+                                android:src="@drawable/ic_instagram"
+                                android:tint="@color/colorPrimary" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -134,12 +132,12 @@
                             android:orientation="vertical">
 
                             <ImageView
-                                android:layout_width="43dp"
-                                android:layout_height="43dp"
-                                android:background="@drawable/share_icon_bg"
-                                android:backgroundTint="#232323"
-                                android:padding="8dp"
-                                android:src="@drawable/ic_more" />
+                                android:layout_width="@dimen/_38sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:background="@drawable/bg_main_button_icon"
+                                android:padding="@dimen/_8sdp"
+                                android:src="@drawable/ic_more"
+                                android:tint="@color/colorPrimary" />
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

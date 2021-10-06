@@ -54,7 +54,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:text="Yes"
-                android:textColor="#252525"
+                android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
         </LinearLayout>
 
@@ -73,7 +73,7 @@
                 android:clickable="true"
                 android:gravity="center"
                 android:text="No"
-                android:textColor="#000000"
+                android:textColor="@color/colorPrimary"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>

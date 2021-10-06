@@ -34,7 +34,7 @@
         android:id="@+id/ivSuit"
         android:layout_width="150dp"
         android:layout_gravity="center"
-        android:layout_height="100dp" />
+        android:layout_height="150dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvWatch"
