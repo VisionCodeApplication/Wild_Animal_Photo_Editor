@@ -56,12 +56,12 @@
         android:layout_weight="1"
         android:background="@drawable/pattern">
 
-        <com.zerotech.wildanimalphotoeditor.view.TouchImageView
+        <com.wildanimalphoto.photoeditor.view.TouchImageView
             android:id="@+id/drawingImageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-        <com.zerotech.wildanimalphotoeditor.view.BrushImageView
+        <com.wildanimalphoto.photoeditor.view.BrushImageView
             android:id="@+id/brushContainingView"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

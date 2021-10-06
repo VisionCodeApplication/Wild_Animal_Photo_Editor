@@ -1,4 +1,4 @@
-package com.zerotech.wildanimalphotoeditor;
+package com.wildanimalphoto.photoeditor;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.zerotech.wildanimalphotoeditor", appContext.getPackageName());
+        assertEquals("com.wildanimalphoto.photoeditor", appContext.getPackageName());
     }
 }

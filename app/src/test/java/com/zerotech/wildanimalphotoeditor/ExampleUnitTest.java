@@ -1,4 +1,4 @@
-package com.zerotech.wildanimalphotoeditor;
+package com.wildanimalphoto.photoeditor;
 
 import org.junit.Test;
 

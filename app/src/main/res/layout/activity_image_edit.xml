@@ -98,7 +98,7 @@
 
         </androidx.cardview.widget.CardView>
 
-        <com.zerotech.wildanimalphotoeditor.view.HorizontalListView
+        <com.wildanimalphoto.photoeditor.view.HorizontalListView
             android:id="@+id/hlv_effect"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_52sdp"
