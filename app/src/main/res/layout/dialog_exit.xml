@@ -16,23 +16,7 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/native_ad_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical" />
-
-        <com.facebook.ads.NativeAdLayout
-            android:id="@+id/fbnative_ad_container"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

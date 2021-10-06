@@ -225,4 +225,5 @@
     </array>
 
     <color name="white">#ffffff</color>
+    <color name="TapTargetColor">#ff0f60cf</color>
 </resources>

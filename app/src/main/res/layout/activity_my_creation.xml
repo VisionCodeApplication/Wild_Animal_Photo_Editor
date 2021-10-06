@@ -62,12 +62,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:id="@+id/fbbanner_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone" />
         </RelativeLayout>
 
         <FrameLayout
@@ -126,5 +120,10 @@
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
+
+        <include
+            layout="@layout/layout_banner_ads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </FrameLayout>

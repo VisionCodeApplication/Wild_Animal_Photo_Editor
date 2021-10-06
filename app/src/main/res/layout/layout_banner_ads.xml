@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:layout_alignParentBottom="true">
+
+
+    <FrameLayout
+        android:id="@+id/banner_outer_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Admob -->
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/admob_banner_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+
+        <!-- Greedy games -->
+        <com.greedygame.core.adview.general.GGAdview
+            android:id="@+id/greedy_banner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:maxHeight="50dp"
+            android:visibility="gone"
+            app:unitId="float-4706" />
+
+        <com.mopub.mobileads.MoPubView
+            android:id="@+id/mop_up_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:moPubAdSize="height_50" />
+
+        <FrameLayout
+            android:id="@+id/iron_source_banner_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@+id/unity_banner_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--  This is your template view -->
+        <com.google.android.ads.nativetemplates.TemplateView
+            android:id="@+id/admob_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:gnt_template_type="@layout/gnt_medium_template_view" />
+
+        <!-- Greedy games -->
+        <com.greedygame.core.adview.general.GGAdview
+            android:id="@+id/greedy_native"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            app:unitId="float-9451" />
+
+    </FrameLayout>
+
+
+</LinearLayout>

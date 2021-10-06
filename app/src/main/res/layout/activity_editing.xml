@@ -5,42 +5,94 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_main_screen"
         android:orientation="vertical"
-        tools:context=".activities.MainActivity"
+        tools:context=".activities.EditingActivity"
         android:layout_weight="1">
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/_52sdp"
+            android:background="@drawable/bg_appbar"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/back"
+                android:tint="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Edit Image"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/ivDone"
+                android:layout_width="@dimen/_38sdp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_12sdp"
+                android:src="@drawable/done"
+                android:tint="@color/colorPrimary" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMain"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/animation_view"
+            <ImageView
+                android:id="@+id/ivSuit"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/ivLauncher"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/anim_home_screen" />
-        </LinearLayout>
+                android:src="@drawable/frame1" />
+
+            <ImageView
+                android:id="@+id/ivMain"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true" />
+
+            <FrameLayout
+                android:id="@+id/fl_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.wildanimalphoto.photoeditor.customviews.HorizontalListView
+                android:id="@+id/hlv_frame"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_52sdp"
+                android:layout_alignParentBottom="true"
+                android:background="#50000000" />
+
+            <com.wildanimalphoto.photoeditor.customviews.HorizontalListView
+                android:id="@+id/hlv_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:background="#bcffffff"
+                android:visibility="gone" />
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_57sdp"
+            android:layout_height="@dimen/_52sdp"
             android:background="@drawable/bg_bottom_bar"
             android:orientation="horizontal"
-            android:paddingTop="4dp"
-            android:paddingBottom="1dp">
+            android:paddingTop="5dp">
 
             <LinearLayout
-                android:id="@+id/llBackground"
+                android:id="@+id/ll_Frame"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -52,7 +104,7 @@
                     android:layout_weight="1"
                     android:padding="@dimen/_7sdp"
                     android:src="@drawable/background"
-                    app:tint="#ffffff" />
+                    android:tint="#ffffff" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -64,7 +116,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/llFrame"
+                android:id="@+id/ll_Erase"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -75,20 +127,20 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:padding="@dimen/_7sdp"
-                    android:src="@drawable/frame"
-                    app:tint="#ffffff" />
+                    android:src="@drawable/eraser"
+                    android:tint="#ffffff" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Frames"
+                    android:text="Eraser"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/_12ssp" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/llForest"
+                android:id="@+id/ll_Flip"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -99,20 +151,20 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:padding="@dimen/_7sdp"
-                    android:src="@drawable/forest"
-                    app:tint="#ffffff" />
+                    android:src="@drawable/flip"
+                    android:tint="#ffffff" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Forest"
+                    android:text="Flip"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/_12ssp" />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/llCreation"
+                android:id="@+id/ll_Animal"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -123,24 +175,19 @@
                     android:layout_height="0dp"
                     android:layout_weight="1"
                     android:padding="@dimen/_7sdp"
-                    android:src="@drawable/creation"
-                    app:tint="#ffffff" />
+                    android:src="@drawable/animal"
+                    android:tint="#ffffff" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="My Creation"
+                    android:text="Animal"
                     android:textColor="#ffffff"
                     android:textSize="@dimen/_12ssp" />
             </LinearLayout>
-            <SeekBar
-                android:id="@+id/coordinatorLayout_main"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone"
-                tools:ignore="MissingConstraints" />
         </LinearLayout>
+
     </LinearLayout>
 
     <include

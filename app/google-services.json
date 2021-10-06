@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "893793760712",
+    "project_id": "wild-animal-photo-editor-40eab",
+    "storage_bucket": "wild-animal-photo-editor-40eab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893793760712:android:f20e1c512726496c5b3cfd",
+        "android_client_info": {
+          "package_name": "com.wildanimalphoto.photoeditor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893793760712-tucrg623f2te89mc323agito6om34usu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv9aOVqlI1AtjmC27aYzJ9LZBJiwxuAuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893793760712-tucrg623f2te89mc323agito6om34usu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

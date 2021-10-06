@@ -163,7 +163,7 @@ public class MultiTouchListener implements OnTouchListener {
     }
 
     public boolean onTouch(View view, MotionEvent event) {
-//        EditActivity.onTouch.removeBorder();
+//        EditingActivity.onTouch.removeBorder();
         int newPointerIndex = 0;
         this.mScaleGestureDetector.onTouchEvent(view, event);
         if (this.isTranslateEnabled) {
