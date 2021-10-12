@@ -24,6 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.google.android.ads.mediationtestsuite.MediationTestSuite;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int PERMISSION_REQUEST_CODE = 0;
     private static final int REQ_CODE_VERSION_UPDATE = 530;
     private static final int RC_APP_UPDATE = 11;
-    private static final String ONESIGNAL_APP_ID = "########-####-####-####-############";
+    private static final String ONESIGNAL_APP_ID = "167ae5d0-f082-4d7a-a03e-9296e4e46db0";
 
 
     @Override
@@ -96,6 +97,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         checkPermision();
 
+
+//        MediationTestSuite.launch(MainActivity.this);
 
         llBackground = findViewById(R.id.llBackground);
         llFrame = findViewById(R.id.llFrame);

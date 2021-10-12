@@ -23,7 +23,7 @@
             android:layout_centerHorizontal="true"
             android:visibility="gone"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3940256099942544/6300978111"/>
+            ads:adUnitId="ca-app-pub-6147726710374008/7354782898"/>
 
         <!-- Greedy games -->
         <com.greedygame.core.adview.general.GGAdview
@@ -32,7 +32,7 @@
             android:layout_height="50dp"
             android:maxHeight="50dp"
             android:visibility="gone"
-            app:unitId="float-4706" />
+            app:unitId="float-10139" />
 
         <com.mopub.mobileads.MoPubView
             android:id="@+id/mop_up_banner"
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:visibility="gone"
-            app:unitId="float-9451" />
+            app:unitId="float-10140" />
 
     </FrameLayout>
 

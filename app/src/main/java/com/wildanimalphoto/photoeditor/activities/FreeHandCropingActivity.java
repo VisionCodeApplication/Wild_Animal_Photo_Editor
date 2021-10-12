@@ -63,12 +63,15 @@ public class FreeHandCropingActivity extends AppCompatActivity implements OnClic
     private TextView tv_rotate;
     private int width;
     public static Bitmap bitmap;
+    private String imagePath;
 
     protected void onCreate(Bundle bundle) {
         StringBuilder stringBuilder;
         super.onCreate(bundle);
         requestWindowFeature(1);
         setContentView((int) R.layout.activity_free_hand_croping);
+
+
 
 //        this.freecrop = Util.selectedBitmap;
         bitmap = HomeActivity.selectedBitmap;
@@ -158,6 +161,8 @@ public class FreeHandCropingActivity extends AppCompatActivity implements OnClic
         this.rotate.setOnClickListener(this);
         this.rootRelative = (RelativeLayout) findViewById(R.id.rootRelative);
         this.rootRelative.setVisibility(0);
+
+//        this.our_image.setImageBitmap(HomeActivity.selectedBitmap);
     }
 
     @SuppressLint("WrongConstant")
@@ -196,7 +201,7 @@ public class FreeHandCropingActivity extends AppCompatActivity implements OnClic
 
             public void run() {
                 bitmap = trim(getbitmap(rootRelative));
-//                startActivityForResult(new Intent(FreeHandCropingActivity.this, Editing.class), 1025);
+                startActivityForResult(new Intent(FreeHandCropingActivity.this, EditingActivity.class), 1025);
                 our_image.setImageBitmap(null);
                 setlayout();
                 setResult(RESULT_OK);

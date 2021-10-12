@@ -86,7 +86,7 @@ public class AdsHelper {
         GreedyGameAds.initWith(appConfig, null);
 
         // unity
-        UnityAds.initialize(activity, AdUnitId.unityAppId, true);
+        UnityAds.initialize(activity, AdUnitId.unityAppId, false);
 
         // mop up
         SdkConfiguration.Builder SdkConfiguration = new SdkConfiguration.Builder(AdUnitId.mopUpAppId);
@@ -207,7 +207,7 @@ public class AdsHelper {
             case 1: // admob
                 AdRequest adRequest = new AdRequest.Builder().build();
 
-                InterstitialAd.load(activity, "ca-app-pub-3940256099942544/1033173712", adRequest,
+                InterstitialAd.load(activity, "ca-app-pub-6147726710374008/2108009853", adRequest,
                         new InterstitialAdLoadCallback() {
                             @Override
                             public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {

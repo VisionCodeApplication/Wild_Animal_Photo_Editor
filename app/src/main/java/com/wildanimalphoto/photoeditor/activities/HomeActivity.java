@@ -1,6 +1,8 @@
 package com.wildanimalphoto.photoeditor.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Build;
@@ -35,6 +37,7 @@ import com.wildanimalphoto.photoeditor.otherClass.GlobClass;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
@@ -142,7 +145,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void pickFromCamera() {
-        final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/.picFolder/";
+        /*final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/.picFolder/";
         File newdir = new File(dir);
         newdir.mkdirs();
         count++;
@@ -159,6 +162,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 newfile);
         Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+        startActivityForResult(cameraIntent, 1888);*/
+
+        Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(cameraIntent, 1888);
     }
 
@@ -194,16 +200,45 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             } else if (requestCode == 1025) {
                 HomeActivity.selectedBitmap = FreeHandCropingActivity.bitmap;
                 startActivityForResult(new Intent(this, EditingActivity.class), 2500);
-
                 Log.d("TAG", "onActivityResult: 3");
             } else if (requestCode == 1888) {
-                startCrop(outputFileUri);
+//                startCrop(outputFileUri);
+                Bitmap photo = (Bitmap) data.getExtras().get("data");
+                HomeActivity.selectedBitmap = photo;
+                startActivityForResult(new Intent(this, FreeHandCropingActivity.class), 2500);
+                Log.d("getting Bitmap", "onActivityResult: ");
             } else if (requestCode == 2500) {
                 setResult(RESULT_OK);
                 finish();
             }
         }
     }
+
+    public Uri getImageUri(Context inContext, Bitmap inImage) {
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
+        return Uri.parse(path);
+    }
+
+    private String getRealPathFromURI(Uri tempUri) {
+        String imgDecodableString = null;
+        try {
+            String[] projection = {MediaStore.Images.Media.DATA};
+            Cursor cursor = getContentResolver().query(tempUri,
+                    projection, null, null, null);
+            cursor.moveToFirst();
+            int columnIndex = cursor.getColumnIndex(projection[0]);
+            imgDecodableString = cursor.getString(columnIndex);
+            cursor.close();
+            Log.d("TAG", "imgDecodableStringCamera: " + imgDecodableString);
+        } catch (Exception e) {
+            e.printStackTrace();
+            Log.d("TAG", "imgDecodableStringCamera: " + e.getLocalizedMessage());
+        }
+        return imgDecodableString;
+    }
+
 
     private void startCrop(@NonNull Uri uri) {
         UCrop uCrop = UCrop.of(uri, Uri.fromFile(new File(getCacheDir(), ".jpg")));
